@@ -1,2 +1,2 @@
 # visxml
-XML Scheme Definition for FMU-based Visualization.
+XML Schema Definition for FMU-based Visualization.

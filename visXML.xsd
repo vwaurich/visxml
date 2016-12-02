@@ -3,7 +3,7 @@
 
 <xsd:annotation>
 	<xsd:documentation xml:lang="en" >
-		XML Scheme Definition for FMU-based Visualization.
+		XML Schema Definition for FMU-based Visualization.
 		Copyright Volker Waurich 02.12.2016 https://github.com/vwaurich/visxml
 	</xsd:documentation>
 </xsd:annotation>
