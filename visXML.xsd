@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:annotation>
+	<xsd:documentation xml:lang="en" >
+		XML Scheme Definition for FMU-based Visualization.
+		Copyright Volker Waurich 02.12.2016 https://github.com/vwaurich/visxml
+	</xsd:documentation>
+</xsd:annotation>
+
+<xsd:element name="visualization" type="visualizationType"/>
+
+<xsd:complexType name="visualizationType">
+	<xsd:sequence>
+		<xsd:element name="shape" type="shapeType" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="shapeType">
+	<xsd:sequence>
+		<xsd:element name="ident" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		<xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		<xsd:element name="T" type = "referenceType_9"/>
+		<xsd:element name="r" type = "referenceType_3"/>
+		<xsd:element name="r_shape" type = "referenceType_3"/>
+		<xsd:element name="lengthDir" type = "referenceType_3"/>
+		<xsd:element name="widthDir" type = "referenceType_3"/>
+		<xsd:element name="length" type = "referenceType"/>
+		<xsd:element name="width" type = "referenceType"/>
+		<xsd:element name="height" type = "referenceType"/>
+		<xsd:element name="extra" type = "referenceType"/>
+		<xsd:element name="color" type = "referenceType_3"/>
+		<xsd:element name="specCoeff" type = "referenceType"/>
+	</xsd:sequence>
+</xsd:complexType>
+	
+<xsd:complexType name="referenceType_9">
+	<xsd:choice minOccurs="9" maxOccurs="9">
+		<xsd:element name="exp" type="xsd:double"/>
+		<xsd:element name="cref" type="xsd:string"/>
+	</xsd:choice>	
+</xsd:complexType>
+
+<xsd:complexType name="referenceType_3">
+	<xsd:choice minOccurs="3" maxOccurs="3">
+		<xsd:element name="exp" type="xsd:double"/>
+		<xsd:element name="cref" type="xsd:string"/>
+	</xsd:choice>	
+</xsd:complexType>
+
+<xsd:complexType name="referenceType">
+	<xsd:choice minOccurs="1" maxOccurs="1">
+		<xsd:element name="exp" type="xsd:double"/>
+		<xsd:element name="cref" type="xsd:string"/>
+	</xsd:choice>	
+</xsd:complexType>
+	
+</xsd:schema>
